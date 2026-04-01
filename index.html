@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Journey - Aprenda JavaScript</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-badge">JS</span>
+      <div>
+        <h1>JS Journey</h1>
+        <p>Do zero ao avançado com prática real</p>
+      </div>
+    </div>
+    <button id="resetProgressBtn" class="btn btn-ghost">Resetar progresso</button>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar card">
+      <h2>Módulos</h2>
+      <nav id="moduleNav" class="module-nav"></nav>
+
+      <section class="progress-panel">
+        <h3>Seu progresso</h3>
+        <div class="progress-wrapper">
+          <div class="progress-track">
+            <div id="progressBar" class="progress-fill"></div>
+          </div>
+          <span id="progressText">0%</span>
+        </div>
+        <p id="motivationalMessage" class="message">Comece agora e desbloqueie seu potencial!</p>
+      </section>
+
+      <section class="stats-panel">
+        <h3>Gamificação</h3>
+        <div class="stat-item"><span>Pontos</span><strong id="scoreValue">0</strong></div>
+        <div class="stat-item"><span>Nível</span><strong id="levelValue">1</strong></div>
+        <div class="stat-item"><span>Aulas concluídas</span><strong id="completedValue">0</strong></div>
+      </section>
+    </aside>
+
+    <section class="content-area">
+      <section class="hero card">
+        <h2>Plataforma interativa de JavaScript</h2>
+        <p>
+          Aprenda JavaScript de forma progressiva com aulas objetivas, quizzes de múltipla escolha,
+          desafios práticos e um editor para testar código direto no navegador.
+        </p>
+        <div class="hero-tags">
+          <span>Iniciante</span>
+          <span>Intermediário</span>
+          <span>Avançado</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h3 id="lessonTitle">Selecione uma aula</h3>
+          <button id="markCompletedBtn" class="btn btn-primary" disabled>Marcar como concluída</button>
+        </div>
+        <p id="lessonDescription">Escolha um módulo e uma aula para começar.</p>
+        <div class="code-block">
+          <h4>Exemplo de código</h4>
+          <pre><code id="lessonCode">// O exemplo aparecerá aqui.</code></pre>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Questionário</h3>
+        <p class="muted">Responda para fixar o conteúdo da aula.</p>
+        <form id="quizForm" class="quiz-form"></form>
+        <div class="actions">
+          <button id="submitQuizBtn" class="btn btn-primary" disabled>Corrigir questionário</button>
+        </div>
+        <div id="quizFeedback" class="feedback-box"></div>
+      </section>
+
+      <section class="card">
+        <h3>Desafio prático</h3>
+        <p id="challengeText">Selecione uma aula para ver o desafio.</p>
+        <div class="actions">
+          <button id="hintBtn" class="btn btn-ghost" disabled>Ver dica</button>
+          <button id="solutionBtn" class="btn btn-ghost" disabled>Ver resposta</button>
+        </div>
+        <div id="challengeHelper" class="feedback-box"></div>
+      </section>
+
+      <section class="card">
+        <h3>Editor de código</h3>
+        <p class="muted">Escreva seu JavaScript e execute no navegador.</p>
+        <textarea id="codeEditor" spellcheck="false">// Digite seu código JavaScript aqui.</textarea>
+        <div class="actions">
+          <button id="runCodeBtn" class="btn btn-primary">Executar código</button>
+          <button id="runChallengeBtn" class="btn btn-secondary" disabled>Validar desafio</button>
+        </div>
+        <div class="output">
+          <h4>Saída</h4>
+          <pre id="outputPanel">A saída aparecerá aqui...</pre>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
